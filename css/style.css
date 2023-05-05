@@ -86,7 +86,7 @@ body {
 .section {
   display: flex;
   justify-content: center;
-  display: none;
+  /* display: none; */
 }
 .section__container {
   background-image: url(../images/bg-triangle.svg);
@@ -187,7 +187,8 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 30rem;
-  /* display: none; */
+  align-items: center;
+  display: none;
 }
 .you__picked,
 .house__picked {
@@ -196,6 +197,7 @@ body {
   gap: 4rem;
   align-items: center;
 }
+
 .picked__heading {
   font-size: 2rem;
   text-transform: uppercase;
@@ -210,10 +212,30 @@ body {
   background-size: cover;
   /* z-index: 5; */
 }
+.chosen__rock-img {
+  top: -1rem;
+  left: 6rem;
+  position: relative;
+  padding: 4.45rem 4.95rem;
+}
 
-.you__picked-img::before {
-  content: "";
-  display: block;
+.chosen__img {
+  /* add this to when selected */
+  padding: 4.45rem 4.95rem;
+  /* border: 1.4rem solid #4865f4; */
+  top: -2rem;
+  left: -2rem;
+  position: relative;
+}
+
+/* display for the winner */
+.bg {
+  display: none;
+}
+
+.bg-1 {
+  /* content: ""; */
+  /* display: block; */
   position: absolute;
   top: -3.5rem;
   left: -3.5rem;
@@ -223,9 +245,9 @@ body {
   z-index: -1;
   background-color: #ffffff12;
 }
-.you__picked-img::after {
-  content: "";
-  display: block;
+.bg-2 {
+  /* content: ""; */
+  /* display: block; */
   position: absolute;
   top: -7rem;
   left: -7rem;
@@ -236,9 +258,9 @@ body {
   background-color: #ffffff0d;
 }
 
-.you__picked-img::before::before {
-  content: "";
-  display: block;
+.bg-3 {
+  /* content: ""; */
+  /* display: block; */
   position: absolute;
   top: -10.5rem;
   left: -10.5rem;
@@ -248,7 +270,60 @@ body {
   z-index: -3;
   background-color: #ffffff08;
 }
-.picked__heading {
+
+/* WIN SECTION */
+.win__section,
+.lose__section {
+  /* width: 65rem; */
+  height: 30rem;
+  /* display: flex;
+  justify-content: center; */
+  /* gap: 3rem; */
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* gap: 3rem; */
+  /* display: none; */
+}
+
+.win__heading,
+.lose__heading {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.win__box,
+.lose__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  /* align-self: center; */
+}
+
+.btn {
+  background-color: #fff;
+  font-size: 1.2rem;
+  padding: 0.8rem 3rem;
+  border: 0;
+  outline: none;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.win__btn {
+  color: #141539;
+}
+
+.lose__btn {
+  color: #dc2e4e;
+}
+
+.win__section,
+.lose__section,
+.pick__section-1 {
+  display: none;
 }
 
 /* 
