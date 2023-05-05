@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <script src="script.js" defer></script>
+
+    <!-- Score Rules You Picked The House Picked You Win You Lose Play Again -->
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <header class="header">
+          <div class="heading__box">
+            <h2 class="heading__text">Rock</h2>
+            <h2 class="heading__text">Paper</h2>
+            <h2 class="heading__text">Scissors</h2>
+          </div>
+          <div class="score__box">
+            <p class="score__heading">Score</p>
+            <p class="score__count">12</p>
+          </div>
+        </header>
+        <section class="section">
+          <div class="section__container">
+            <img
+              src="images/icon-paper.svg"
+              alt="paper hand"
+              class="game__img paper__img"
+            />
+            <img
+              src="images/icon-scissors.svg"
+              alt="scissors hand"
+              class="game__img scissors__img"
+            />
+            <img
+              src="images/icon-rock.svg"
+              alt="rock hand"
+              class="game__img rock__img"
+            />
+          </div>
+        </section>
+        <section class="pick__section-1">
+          <div class="you__picked">
+            <h3 class="picked__heading">You picked</h3>
+            <div class="you__picked-img"></div>
+          </div>
+          <div class="house__picked">
+            <h3 class="picked__heading">The house picked</h3>
+            <div class="house__picked-img"></div>
+          </div>
+        </section>
+      </div>
+      <p class="rules">Rules</p>
+    </main>
+    <div class="rules__box">
+      <div class="rules__header">
+        <h2 class="rules__heading">Rules</h2>
+        <img src="images/icon-close.svg" alt="close icon" class="close__icon" />
+      </div>
+      <img src="images/image-rules.svg" alt="rules" class="rules__img" />
+    </div>
+    <div class="overlay"></div>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
