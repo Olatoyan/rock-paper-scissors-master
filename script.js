@@ -16,6 +16,7 @@ const rockHand = document.querySelector(".rock__img");
 const pickedSection = document.querySelector(".pick__section-1");
 const youPicked = document.querySelector(".you__picked");
 const housePicked = document.querySelector(".house__picked");
+const housePickedImg = document.querySelector(".house__picked-img");
 
 const winSection = document.querySelector(".win__section");
 const loseSection = document.querySelector(".lose__section");
@@ -41,7 +42,7 @@ const compOptions = [paperHand, scissorsHand, rockHand];
 function computerPlay() {
   return compOptions[Math.floor(Math.random() * compOptions.length)];
 }
-// console.log(computerSelection);
+
 firstSectionContainer.addEventListener("click", function (e) {
   const computerSelection = computerPlay();
   if (e.target.classList.contains("paper__img")) {
@@ -86,165 +87,10 @@ firstSectionContainer.addEventListener("click", function (e) {
         </div>
         `
       );
-
-      setTimeout(() => {
-        // if (computerSelection.alt === "rock hand") {
-        //   pickedSection.style.display = "none";
-        //   winSection.style.display = "grid";
-        //   winSection.textContent = "";
-        //   const alt = computerSelection.alt;
-        //   const classList =
-        //     alt === "rock hand"
-        //       ? `${computerSelection.classList} chosen__rock-img`
-        //       : `${computerSelection.classList} chosen__img`;
-        //   winSection.insertAdjacentHTML(
-        //     "beforeend",
-        //     `
-        //     <div class="you__picked">
-        //     <h3 class="win__heading">You picked</h3>
-        //     <div class="you__picked-img">
-        //     <img
-        //     src="${e.target.getAttribute("src")}"
-        //     alt="${e.target.alt}"
-        //     class="${e.target.classList} chosen__img"
-        //   />
-        //       <div class="bg bg-1"></div>
-        //       <div class="bg bg-2"></div>
-        //       <div class="bg bg-3"></div>
-        //     </div>
-        //   </div>
-        //   <div class="win__box">
-        //     <h3 class="win__heading">You win</h3>
-        //     <button class="btn win__btn">Play again</button>
-        //   </div>
-        //   <div class="house__picked">
-        //     <h3 class="win__heading">The house picked</h3>
-        //     <div class="house__picked-img">
-        //     <img
-        //     src="${computerSelection.getAttribute("src")}"
-        //       alt="${alt}"
-        //       class="${classList}"
-        //     />
-        //       <div class="bg bg-1"></div>
-        //       <div class="bg bg-2"></div>
-        //       <div class="bg bg-3"></div>
-        //     </div>
-        //   </div>
-        //     `
-        //   );
-        //   const btn = document.querySelector(".btn");
-        //   btn.addEventListener("click", function (e) {
-        //     firstSection.style.display = "flex";
-        //     pickedSection.style.display = "none";
-        //     firstSectionContainer.style.display = "flex";
-        //     winSection.style.display = "none";
-        //   });
-        //   console.log(score);
-        //   score++;
-        // } else if (computerSelection.alt === "scissors hand") {
-        //   pickedSection.style.display = "none";
-        //   loseSection.style.display = "grid";
-        //   loseSection.textContent = "";
-        //   const alt = computerSelection.alt;
-        //   const classList =
-        //     alt === "rock hand"
-        //       ? `${computerSelection.classList} chosen__rock-img`
-        //       : `${computerSelection.classList} chosen__img`;
-        //   console.log(e.target.src);
-        //   loseSection.insertAdjacentHTML(
-        //     "beforeend",
-        //     `
-        //     <div class="you__picked">
-        //     <h3 class="lose__heading">You picked</h3>
-        //     <div class="you__picked-img">
-        //     <img
-        //     src="${e.target.getAttribute("src")}"
-        //     alt="${e.target.alt}"
-        //     class="${e.target.classList} chosen__img"
-        //   />
-        //       <div class="bg bg-1"></div>
-        //       <div class="bg bg-2"></div>
-        //       <div class="bg bg-3"></div>
-        //     </div>
-        //   </div>
-        //   <div class="lose__box">
-        //     <h3 class="lose__heading">You lose</h3>
-        //     <button class="btn win__btn">Play again</button>
-        //   </div>
-        //   <div class="house__picked">
-        //     <h3 class="lose__heading">The house picked</h3>
-        //     <div class="house__picked-img">
-        //     <img
-        //     src="${computerSelection.getAttribute("src")}"
-        //       alt="${alt}"
-        //       class="${classList}"
-        //     />
-        //       <div class="bg bg-1"></div>
-        //       <div class="bg bg-2"></div>
-        //       <div class="bg bg-3"></div>
-        //     </div>
-        //   </div>
-        //     `
-        //   );
-        //   score--;
-        //   const btn = document.querySelector(".btn");
-        //   btn.addEventListener("click", function (e) {
-        //     window.location.href = "index.html";
-        //   });
-        // } else {
-        //   pickedSection.style.display = "none";
-        //   drawSection.style.display = "grid";
-        //   drawSection.textContent = "";
-        //   drawSection.insertAdjacentHTML(
-        //     "beforeend",
-        //     `
-        //   <div class="you__picked">
-        //   <h3 class="draw__heading">You picked</h3>
-        //   <div class="you__picked-img">
-        //   <img
-        //   src="${e.target.getAttribute("src")}"
-        //   alt="${e.target.alt}"
-        //   class="${e.target.classList} chosen__img"
-        // />
-        //     <div class="bg bg-1"></div>
-        //     <div class="bg bg-2"></div>
-        //     <div class="bg bg-3"></div>
-        //   </div>
-        // </div>
-        // <div class="draw__box">
-        //   <h3 class="draw__heading">Its a tie</h3>
-        //   <button class="btn draw__btn">Play again</button>
-        // </div>
-        // <div class="house__picked">
-        //   <h3 class="draw__heading">The house picked</h3>
-        //   <div class="house__picked-img">
-        //   <img
-        //   src="${computerSelection.getAttribute("src")}"
-        //     alt="${alt}"
-        //     class="${classList}"
-        //   />
-        //     <div class="bg bg-1"></div>
-        //     <div class="bg bg-2"></div>
-        //     <div class="bg bg-3"></div>
-        //   </div>
-        // </div>
-        //   `
-        //   );
-        //   const drawBtn = document.querySelector(".draw__btn");
-        //   drawBtn.addEventListener("click", function (e) {
-        //     window.location.href = "index.html";
-        //   });
-        // }
-      }, 1500);
-      // if ()
     }, 1000);
   }
   if (e.target.classList.contains("rock__img")) {
     firstSection.style.display = "none";
-    // console.log(e.target);
-    // console.log(e.target.classList);
-    // console.log(e.target.alt);
-    // console.log(e.target.src);
 
     pickedSection.style.display = "grid";
     youPicked.textContent = "";
@@ -327,16 +173,10 @@ firstSectionContainer.addEventListener("click", function (e) {
       );
     }, 1000);
   }
-  console.log(computerSelection.alt);
+
   const playerSelection = youPicked
     .querySelector(".you__picked-img")
     .querySelector("img");
-
-  console.log(playerSelection.alt);
-
-  // const scoreCount = document.querySelector(".score__count");
-
-  // let score = (scoreCount.textContent = 0);
 
   if (
     (playerSelection.alt === "rock hand" &&
@@ -346,10 +186,6 @@ firstSectionContainer.addEventListener("click", function (e) {
     (playerSelection.alt === "paper hand" &&
       computerSelection.alt === "rock hand")
   ) {
-    // score++;
-
-    console.log("yep");
-
     setTimeout(() => {
       pickedSection.style.display = "none";
       winSection.style.display = "grid";
@@ -417,7 +253,6 @@ firstSectionContainer.addEventListener("click", function (e) {
     (playerSelection.alt === "scissors hand" &&
       computerSelection.alt === "rock hand")
   ) {
-    console.log("no");
     setTimeout(() => {
       pickedSection.style.display = "none";
       loseSection.style.display = "grid";
@@ -464,8 +299,6 @@ firstSectionContainer.addEventListener("click", function (e) {
       </div>
         `
       );
-      // score--;
-      // console.log(score);
 
       const loseBtn = document.querySelector(".lose__btn");
       loseBtn.addEventListener("click", function (e) {
@@ -486,7 +319,6 @@ firstSectionContainer.addEventListener("click", function (e) {
     (playerSelection.alt === "scissors hand" &&
       computerSelection.alt === "scissors hand")
   ) {
-    console.log("draw");
     setTimeout(() => {
       const alt = computerSelection.alt;
       const classList =
@@ -542,7 +374,4 @@ firstSectionContainer.addEventListener("click", function (e) {
       scoreCount.textContent = scoreCount.textContent;
     }, 2000);
   }
-  console.log(score);
 });
-
-// if ()

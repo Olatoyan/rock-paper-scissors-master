@@ -69,7 +69,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* gap: 1rem; */
 }
 .score__heading {
   font-size: 1.2rem;
@@ -86,7 +85,6 @@ body {
 .section {
   display: flex;
   justify-content: center;
-  /* display: none; */
 }
 .section__container {
   background-image: url(../images/bg-triangle.svg);
@@ -132,6 +130,7 @@ body {
   border: 1px solid #ddd;
   border-radius: 0.4rem;
   align-self: flex-end;
+  margin-top: 5rem;
   margin-right: 3rem;
   cursor: pointer;
 }
@@ -176,7 +175,6 @@ body {
   width: 100%;
   height: 100%;
   background-color: #0000007e;
-  /* opacity: 0; */
   transition: opacity 0.3s;
   border-radius: 1.5rem;
 }
@@ -210,13 +208,10 @@ body {
   border-radius: 50%;
   position: relative;
   background-size: cover;
-  /* z-index: 5; */
 }
 
 .chosen__img {
-  /* add this to when selected */
   padding: 4.45rem 4.95rem;
-  /* border: 1.4rem solid #4865f4; */
   top: -2rem;
   left: -2rem;
   position: relative;
@@ -228,14 +223,7 @@ body {
   padding: 4.45rem 4.95rem;
 }
 
-/* display for the winner */
-.bg {
-  /* display: none; */
-}
-
 .bg-1 {
-  /* content: ""; */
-  /* display: block; */
   position: absolute;
   top: -3.5rem;
   left: -3.5rem;
@@ -246,8 +234,6 @@ body {
   background-color: #ffffff12;
 }
 .bg-2 {
-  /* content: ""; */
-  /* display: block; */
   position: absolute;
   top: -7rem;
   left: -7rem;
@@ -259,8 +245,6 @@ body {
 }
 
 .bg-3 {
-  /* content: ""; */
-  /* display: block; */
   position: absolute;
   top: -10.5rem;
   left: -10.5rem;
@@ -275,16 +259,10 @@ body {
 .win__section,
 .lose__section,
 .draw__section {
-  /* width: 65rem; */
   height: 30rem;
-  /* display: flex;
-  justify-content: center; */
-  /* gap: 3rem; */
   align-items: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* gap: 3rem; */
-  /* display: none; */
 }
 
 .win__heading,
@@ -301,7 +279,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  /* align-self: center; */
 }
 
 .btn {
@@ -316,7 +293,7 @@ body {
 }
 
 .win__btn {
-  color: #141539;
+  color: #4865f4;
 }
 
 .lose__btn {
@@ -328,6 +305,90 @@ body {
 .lose__section,
 .pick__section-1 {
   display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 40.625em) {
+  .container {
+    align-items: center;
+    padding: 2rem;
+    justify-content: center;
+    width: 100vw;
+  }
+  .header {
+    margin-top: 0;
+    align-self: stretch;
+  }
+
+  .pick__section-1 {
+    width: 80vw;
+    /* align-self: center; */
+  }
+
+  .win__section,
+  .lose__section,
+  .draw__section {
+    width: 80vw;
+    align-self: center;
+    gap: 1rem;
+  }
+  .you__picked-img,
+  .house__picked-img {
+    background-color: #1415394b;
+    border-radius: 50%;
+    position: relative;
+    background-size: cover;
+    /* z-index: 5; */
+  }
+
+  .chosen__img {
+    padding: 3.45rem 3.95rem;
+    top: 0;
+    left: 0;
+    position: relative;
+  }
+  .chosen__rock-img {
+    top: 0;
+    left: 0rem;
+    position: relative;
+    padding: 3.45rem 3.95rem;
+  }
+
+  .game__img {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .paper__img {
+    padding: 2.45rem 2.95rem;
+    border: 1.4rem solid #4865f4;
+  }
+
+  .scissors__img {
+    padding: 2.5rem 2.85rem;
+    border: 1.4rem solid #ec9e0e;
+  }
+
+  .rock__img {
+    padding: 3rem;
+    border: 1.4rem solid #dc2e4e;
+    bottom: -5rem;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+@media only screen and (max-width: 28.25em) {
+  html {
+    font-size: 50%;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
 }
 
 /* 
