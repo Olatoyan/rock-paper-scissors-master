@@ -241,7 +241,7 @@ firstSectionContainer.addEventListener("click", function (e) {
         winSection.style.display = "none";
         loseSection.style.display = "none";
         drawSection.style.display = "none";
-        housePicked.textContent = "";
+        document.querySelector(".house__picked-img").textContent = "";
       });
       scoreCount.textContent++;
     }, 2000);
@@ -307,7 +307,7 @@ firstSectionContainer.addEventListener("click", function (e) {
         winSection.style.display = "none";
         loseSection.style.display = "none";
         drawSection.style.display = "none";
-        housePicked.textContent = "";
+        document.querySelector(".house__picked-img").textContent = "";
       });
       scoreCount.textContent--;
     }, 2000);
@@ -369,7 +369,7 @@ firstSectionContainer.addEventListener("click", function (e) {
         winSection.style.display = "none";
         loseSection.style.display = "none";
         drawSection.style.display = "none";
-        housePicked.textContent = "";
+        document.querySelector(".house__picked-img").textContent = "";
       });
       scoreCount.textContent = scoreCount.textContent;
     }, 2000);
