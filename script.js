@@ -375,6 +375,3 @@ firstSectionContainer.addEventListener("click", function (e) {
     }, 2000);
   }
 });
-
-let ff;
-let h;
