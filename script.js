@@ -4,24 +4,24 @@ const rules = document.querySelector(".rules");
 const rulesBox = document.querySelector(".rules__box");
 const closeRuleBox = document.querySelector(".close__icon");
 const overlay = document.querySelector(".overlay");
-
 const scoreCount = document.querySelector(".score__count");
-
 const firstSection = document.querySelector(".section");
 const firstSectionContainer = document.querySelector(".section__container");
 const paperHand = document.querySelector(".paper__img");
 const scissorsHand = document.querySelector(".scissors__img");
 const rockHand = document.querySelector(".rock__img");
-
 const pickedSection = document.querySelector(".pick__section-1");
 const youPicked = document.querySelector(".you__picked");
 const housePicked = document.querySelector(".house__picked");
 const housePickedImg = document.querySelector(".house__picked-img");
-
 const winSection = document.querySelector(".win__section");
 const loseSection = document.querySelector(".lose__section");
 const drawSection = document.querySelector(".draw__section");
-let score = (scoreCount.textContent = 0);
+const playerScore = document.querySelector(".player__score");
+const computerScore = document.querySelector(".computer__score");
+
+let score = (playerScore.textContent = 0);
+let cpu = (computerScore.textContent = 0);
 
 const displayRulesBox = () => {
   rulesBox.style.display = "flex";
@@ -243,7 +243,7 @@ firstSectionContainer.addEventListener("click", function (e) {
         drawSection.style.display = "none";
         document.querySelector(".house__picked-img").textContent = "";
       });
-      scoreCount.textContent++;
+      playerScore.textContent++;
     }, 2000);
   } else if (
     (playerSelection.alt === "rock hand" &&
@@ -309,7 +309,7 @@ firstSectionContainer.addEventListener("click", function (e) {
         drawSection.style.display = "none";
         document.querySelector(".house__picked-img").textContent = "";
       });
-      scoreCount.textContent--;
+      computerScore.textContent++;
     }, 2000);
   } else if (
     (playerSelection.alt === "rock hand" &&
